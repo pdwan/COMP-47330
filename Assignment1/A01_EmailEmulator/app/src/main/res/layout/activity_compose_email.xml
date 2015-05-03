@@ -1,0 +1,224 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<!--
+    Student     : Paula Dwan
+    Student ID  : 13208660
+    Course      : COMP-47330 Practical Android Computing
+    Assignment  : 1
+    Due date    : 04-March-2015
+
+    Summary     : Email emulator where
+                    1a. User launches application - main activity opens : 'ComposeEmailActivity'
+                    1b. User enters values for fields : 'from', 'to', 'cc', 'bcc', 'subject', and
+                        'message'.
+                    2a. User clicks [Send] button and email fields excluding 'bcc' are displayed in
+                        second activity as read only - 'DisplayEmailActivity'.
+                    2b. User clicks [Clear] button and all fields are deleted and reset to initial
+                        blank values.
+                    3.  In 'DisplayEmailActivity' activity, [Back] button returns user to
+                        'Compose EmailActivity' with all original values for each field.
+                    4.  If user closes application then the fields are populated with most recent
+                        values.
+    File        :   activity xml for ComposeEmailActivity
+-->
+<ScrollView
+    android:id="@+id/scrollViewComposeEmail"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".DisplayContact" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <TextView
+            android:id="@+id/textViewEmailFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editTextEmailFrom"
+            android:layout_alignParentLeft="true"
+            android:text="@string/email_from"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:background="#800080"
+            android:layout_alignRight="@+id/textViewEmailSubject"
+            android:layout_alignEnd="@+id/textViewEmailSubject"> </TextView>
+        <EditText
+            android:id="@+id/editTextEmailFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="80dp"
+            android:ems="10"
+            android:textStyle="italic"
+            android:inputType="text|textEmailAddress"
+            android:hint="@string/hint_from"
+            android:layout_alignRight="@+id/btnClearEmail"
+            android:layout_alignEnd="@+id/btnClearEmail"> <requestFocus /> </EditText>
+
+        <TextView
+            android:id="@+id/textViewEmailTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editTextEmailTo"
+            android:layout_alignLeft="@+id/textViewEmailFrom"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="@string/email_to"
+            android:background="#800080"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignRight="@+id/textViewEmailSubject"
+            android:layout_alignEnd="@+id/textViewEmailSubject"> </TextView>
+        <EditText
+            android:id="@+id/editTextEmailTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextEmailCc"
+            android:layout_below="@+id/editTextEmailFrom"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:textStyle="italic"
+            android:inputType="text|textEmailAddress"
+            android:hint="@string/hint_to"
+            android:layout_alignRight="@+id/btnClearEmail"
+            android:layout_alignEnd="@+id/btnClearEmail"> </EditText>
+
+        <TextView
+            android:id="@+id/textViewEmailCc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editTextEmailCc"
+            android:layout_alignLeft="@+id/textViewEmailFrom"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="@string/email_cc"
+            android:background="#800080"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignRight="@+id/textViewEmailSubject"
+            android:layout_alignEnd="@+id/textViewEmailSubject"> </TextView>
+        <EditText
+            android:id="@+id/editTextEmailCc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextEmailFrom"
+            android:layout_below="@+id/editTextEmailTo"
+            android:ems="10"
+            android:inputType="text|textEmailAddress"
+            android:textStyle="italic"
+            android:hint="@string/hint_cc"
+            android:layout_alignRight="@+id/btnClearEmail"
+            android:layout_alignEnd="@+id/btnClearEmail"> </EditText>
+
+        <TextView
+            android:id="@+id/textViewEmailBcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editTextEmailBcc"
+            android:layout_alignLeft="@+id/textViewEmailFrom"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="@string/email_bcc"
+            android:background="#800080"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignRight="@+id/textViewEmailMessage"
+            android:layout_alignEnd="@+id/textViewEmailMessage"> </TextView>
+        <EditText
+            android:id="@+id/editTextEmailBcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextEmailCc"
+            android:layout_below="@+id/editTextEmailCc"
+            android:ems="10"
+            android:textStyle="italic"
+            android:inputType="text|textEmailAddress"
+            android:hint="@string/hint_bcc"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"> </EditText>
+
+        <TextView
+            android:id="@+id/textViewEmailSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/editTextEmailBcc"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="@string/email_subject"
+            android:background="#800080"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignTop="@+id/editTextEmailSubject"> </TextView>
+        <EditText
+            android:id="@+id/editTextEmailSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextEmailBcc"
+            android:ems="10"
+            android:textStyle="italic"
+            android:inputType="text|textEmailSubject"
+            android:hint="@string/hint_subject"
+            android:layout_alignRight="@+id/btnClearEmail"
+            android:layout_alignEnd="@+id/btnClearEmail"
+            android:layout_alignLeft="@+id/editTextEmailMessage"
+            android:layout_alignStart="@+id/editTextEmailMessage"> </EditText>
+
+        <TextView
+            android:id="@+id/textViewEmailMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/editTextEmailMessage"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="@string/email_message"
+            android:background="#800080"
+            android:textAppearance="?android:attr/textAppearanceMedium"> </TextView>
+        <EditText
+            android:id="@+id/editTextEmailMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextEmailSubject"
+            android:ems="10"
+            android:layout_marginTop="20dp"
+            android:textStyle="italic"
+            android:inputType="textMultiLine"
+            android:minLines="5"
+            android:gravity="top|left"
+            android:maxLines="50"
+            android:scrollbars="vertical"
+            android:hint="@string/hint_message"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/btnSendEmail"
+            android:layout_alignStart="@+id/btnSendEmail"> </EditText>
+
+        <Button
+            android:id="@+id/btnSendEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sendWrittenEmail"
+            android:textStyle="bold"
+            android:text="@string/btn_send_email"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/textViewEmailMessage"
+            android:layout_toEndOf="@+id/textViewEmailMessage"> </Button>
+        <Button
+            android:id="@+id/btnClearEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clearWrittenEmail"
+            android:textStyle="bold"
+            android:text="@string/btn_clear_email"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/editTextEmailMessage"
+            android:layout_alignEnd="@+id/editTextEmailMessage"> </Button>
+
+    </RelativeLayout>
+</ScrollView>

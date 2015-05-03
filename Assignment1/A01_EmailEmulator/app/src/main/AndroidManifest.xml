@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Student     :   Paula Dwan
+    Student ID  :   13208660
+    Course      :   COMP-47330 Practical Android Computing
+    Assignment  :   1
+    Due date    :   04-March-2015
+
+    Summary     :   Email emulator where
+                1a. User launches application - main activity opens : 'ComposeEmailActivity'
+                1b. User enters values for fields : 'from', 'to', 'cc', 'bcc', 'subject', and
+                    'message'.
+                2a. User clicks [Send] button and email fields excluding 'bcc' are displayed in
+                    second activity as read only - 'DisplayEmailActivity'.
+                2b. User clicks [Clear] button and all fields are deleted and reset to initial
+                    blank values.
+                3.  In 'DisplayEmailActivity' activity, [Back] button returns user to
+                    'ComposeEmailActivity' with all original values for each field.
+                4.  If user closes application then the fields are populated with most recent
+                    values.
+    File        :   components of EmailEmulator app
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.dwan.paula.a01_emailemulator" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ComposeEmailActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.dwan.paula.a01_emailemulator.DisplayEmailActivity"
+            android:label="@string/title_activity_display_email"
+            android:parentActivityName="org.dwan.paula.a01_emailemulator.ComposeEmailActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.dwan.paula.a01_emailemulator.ComposeEmailActivity" />
+        </activity>
+    </application>
+
+</manifest>
