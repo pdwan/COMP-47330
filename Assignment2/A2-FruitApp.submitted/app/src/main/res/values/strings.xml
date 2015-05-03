@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student     : Paula Dwan
+    Student ID  : 13208660
+    Course      : COMP-47330 Practical Android Computing
+    Assignment  : 2
+    Due date    : 23-March-2015
+
+Summary : Fruit App for Children where
+    1a. User launches application - main activity opens - 'FruitAppMain'
+    1b. User sees list of fruit (ListView).
+    2a. User clicks on one fruit in ListView and opens second activity -
+        'DisplayFruitInformation'.
+    2b. 'DisplayFruitInformation' fields are populated using arrays from arrays.xml.
+        Two languages exist - English (EN) and Swedish (SV)
+    3.  In 'DisplayFruitInformation' activity, [Back] button returns user to
+        'FruitAppMain'.
+
+File :  strings.xml for default language English (EN)
+-->
+
+<resources>
+
+    <string name="app_name">i-FRUIT</string>
+    <string name="app_more_info">More Information …</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_fruit_name">Fruit</string>
+    <string name="title_fruit_desc">Description</string>
+    <string name="title_fruit_image">Image</string>
+    <string name="title_recipe_name">Recipe</string>
+    <string name="title_recipe_steps">Steps</string>
+
+    <string name="btn_back">Back</string>
+    
+    <!-- Names of fruit : used in arrays.xml -->
+    <string name="name_apple"><![CDATA[<b><font color=\"#008000\"><big><big>A</big></big></font>pple</b>]]> </string>
+    <string name="name_orange"><![CDATA[<b><font color=\"#FFA500\"><big><big>O</big></big></font>range</b>]]> </string>
+    <string name="name_banana"><![CDATA[<b><font color=\"#FFFF00\"><big><big>B</big></big></font>anana</b>]]> </string>
+    <string name="name_strawberry"><![CDATA[<b><font color=\"#FF0000\"><big><big>S</big></big></font>trawberries</b>]]> </string>
+
+    <!-- Descriptions of each fruit : used in arrays.xml -->
+    <string name="desc_apple"><![CDATA[<b>Apples</b> are the fruit of apple trees. Apple tress are grown in many countries.
+    Apples come in many colors including <b><font color=\"#008000\">green,</font> <font color=\"#FF0000\">red,</font> <font color=\"#FFC0CB\">pink,</font></b> and <b><font color=\"#FFFF00\">yellow.</b></font>
+    Some apples are eaten raw, while others are used to make juice or for cooking. ]]> </string>
+    <string name="desc_orange"><![CDATA[<b>Oranges</b> are citrus fruits. The Orange is a <i>Pomelo</i> and <i>Mandarin</i> cross.
+    Oranges are <b><font color=\"#FFA500\">orange</font></b> in color and are mainly grown in Brazil. Oranges have lots of vitamin C. Lack of vitamin C causes a disease called Scurvy.
+    <i>A disease sailors used to suffer from during long sea voyages in the 16th to 18th centuries.</i> ]]> </string>
+    <string name="desc_banana"><![CDATA[<b>Bananas</b> are the fruit produced by various banana plants and come in many colours including <font color=\"#FF0000\">red.</font>
+    The bananas we buy are usually <b><font color=\"#FFFF00\">yellow.</font></b> Banana plants are not trees but actually herbs. ]]> </string>
+    <string name="desc_strawberry"><![CDATA[Ripe <b>strawberries</b> are bright <b><font color=\"#FF0000\">red</font></b> in color, juicy and very sweet.
+    Like Apples, they grow all over the world and like <font color=\"#FFA500\">Oranges,</font> Strawberries have lots of vitamin C. Many animals, birds and insects also love to eat strawberries. ]]> </string>
+
+<!-- IMAGES & ICONS used : common to both languages -->
+    <string name="image_apple">fruit_apple</string>
+    <string name="image_orange">fruit_orange</string>
+    <string name="image_banana">fruit_banana</string>
+    <string name="image_strawberry">fruit_strawberries</string>
+
+    <string name="icon_apple">ic_apple</string>
+    <string name="icon_orange">ic_orange</string>
+    <string name="icon_banana">ic_banana</string>
+    <string name="icon_strawberry">ic_strawberry</string>
+
+    <!-- Names of the fruit recipes : used in arrays.xml -->
+    <string name="recipe_apple">Apples for Worms</string>
+    <string name="recipe_orange">Orange Juice</string>
+    <string name="recipe_banana">Banana Split</string>
+    <string name="recipe_strawberry">Pancakes \u0026 Strawberries</string>
+
+    <!-- Fruit recipes : used in arrays.xml -->
+    <string name="steps_apple"><![CDATA[
+        <b>( 1 )</b> Leave the <b>apple</b> on the ground.<br/>
+        <b>( 2 )</b> The worms and other insects start eating it. ]]> </string>
+    <string name="steps_orange"><![CDATA[
+        <b>( 1 )</b> Cut each <b>orange</b> in half (or ask someone who is allowed to use a knife to do so).<br/>
+        <b>( 2 )</b> Squeeze the juice into a glass.<br/>
+        <b>( 3 )</b> Drink and enjoy! ]]> </string>
+    <string name="steps_banana"><![CDATA[
+        <b>( 1 )</b> Peel a <b>banana.</b><br/>
+        <b>( 2 )</b> Put the two halves into a long dish.<br/>
+        <b>( 3 )</b> Add three scoops of ice-cream between them.<br/>
+        <b>( 4 )</b> Add cream, grated chocolate and cherries.<br/>
+        <b>( 5 )</b> Eat and enjoy! ]]> </string>
+    <string name="steps_strawberry"><![CDATA[
+        <b>( 1 )</b> Wash some <b>strawberries.</b><br/>
+        <b>( 2 )</b> Whip some cream.<br/>
+        <b>( 3 )</b> Make at least three pancakes <i>(or get an adult to do so).</i><br/>
+        <b>( 4 )</b> Layer the pancakes, strawberries and cream.<br/>
+        <b>( 5 )</b> Eat and enjoy! ]]> </string>
+    <string name="icon">icon</string>
+
+</resources>

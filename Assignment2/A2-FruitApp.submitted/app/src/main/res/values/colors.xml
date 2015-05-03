@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student     : Paula Dwan
+    Student ID  : 13208660
+    Course      : COMP-47330 Practical Android Computing
+    Assignment  : 2
+    Due date    : 23-March-2015
+
+Summary : Fruit App for Children where
+    1a. User launches application - main activity opens - 'FruitAppMain'
+    1b. User sees list of fruit (ListView).
+    2a. User clicks on one fruit in ListView and opens second activity -
+        'DisplayFruitInformation'.
+    2b. 'DisplayFruitInformation' fields are populated using arrays from arrays.xml.
+        Two languages exist - English (EN) and Swedish (SV)
+    3.  In 'DisplayFruitInformation' activity, [Back] button returns user to
+        'FruitAppMain'.
+
+File :  colors.xml - common colours in use
+-->
+
+<resources>
+    <color name="dark_red">#660000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dark_purple">#660066</color>
+    <color name="dark_blue">#000099</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="black">#000000</color>
+    <color name="orange">#FFA500</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="bright_pink">#FA72D2</color>
+    <color name="dark_green">#004000</color>
+    <color name="dark_orange">#CC8400</color>
+    <color name="green">#008000</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="bright_green">#00FF00</color>
+
+</resources>

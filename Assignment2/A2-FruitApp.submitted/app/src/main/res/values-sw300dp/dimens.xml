@@ -1,0 +1,8 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         -->
+
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+
+</resources>

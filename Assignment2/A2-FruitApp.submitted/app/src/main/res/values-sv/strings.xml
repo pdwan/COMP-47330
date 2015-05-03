@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student     : Paula Dwan
+    Student ID  : 13208660
+    Course      : COMP-47330 Practical Android Computing
+    Assignment  : 2
+    Due date    : 23-March-2015
+
+    Summary     : Fruit App for Children where
+                    1a. User launches application - main activity opens - 'FruitAppMain'
+                    1b. User sees list of fruit (ListView).
+                    2a. User clicks on one fruit in ListView and opens second activity -
+                        'DisplayFruitInformation'.
+                    2b. 'DisplayFruitInformation' fields are populated using arrays from arrays.xml.
+                        Two languages exist - English (EN) and Swedish (SV)
+                    3.  In 'DisplayFruitInformation' activity, [Back] button returns user to
+                        'FruitAppMain'.
+    File        :   strings.xml for second language Swedish <SV>
+-->
+
+<resources>
+
+    <string name="app_name">i-FRUKT</string>
+    <string name="app_more_info">Mer information …</string>
+
+    <string name="action_settings">Inställningar</string>
+
+    <string name="title_fruit_name">Frukt</string>
+    <string name="title_fruit_desc">Beskrivning</string>
+    <string name="title_fruit_image">Bild</string>
+    <string name="title_recipe_name">Recept</string>
+    <string name="title_recipe_steps">Steg</string>
+
+    <string name="btn_back">Tillbaka</string>
+
+    <!-- SV Names of fruit : used in arrays.xml -->
+    <string name="name_apple"><![CDATA[<b><font color=\"#008000\"><big><big>Ä</big></big></font>pple</b>]]> </string>
+    <string name="name_orange"><![CDATA[<b><font color=\"#FFA500\"><big><big>A</big></big></font>pelsin</b>]]> </string>
+    <string name="name_banana"><![CDATA[<b><font color=\"#FFFF00\"><big><big>B</big></big></font>anan</b>]]> </string>
+    <string name="name_strawberry"><![CDATA[<b><font color=\"#FF0000\"><big><big>J</big></big></font>ordgubbar</b>]]> </string>
+
+    <!-- SV Descriptions of each fruit : used in arrays.xml -->
+    <string name="desc_apple"><![CDATA[<b>Äpplen</b> är frukten av äppelträd. Äpplen odlas i många länder.
+    Äpplen finns i många färger inklusive <b><font color=\"#008000\">grön,</font> <font color=\"#FF0000\">röd,</font> <font color=\"#FFC0CB \" >rosa,</font></b> och <b><font color=\"#FFFF00\">gul.</font></b>
+    Vissa äpplen äts råa, medan andra används för att göra jos eller för matlagning. ]]> </string>
+    <string name="desc_orange"><![CDATA[<b>Apelsiner</b> är citrusfrukter. En apelsin är en <i>grapefrukt</i> och <i>mandarin</i> korsning.
+    Apelsiner är <b><font color=\"#FFA500\">oranga</font></b> i färg och odlas främst i Brasilien. Apelsiner har massor av vitamin C. Brist på C-vitamin orsakar en sjukdom som kallas skörbjugg.
+    <i>En sjukdom som sjömän brukade drabbas av under långa resor under 16 - 18 talen.</i> ]]> </string>
+    <string name="desc_banana"><![CDATA[<b>Bananer</b> är frukten som produceras av olika bananplantor och finns i många färger inklusive <font color=\"#FF0000\">röd.</font>
+    Bananerna vi köper är oftast <b><font color=\"#FFFF00\">gula.</font></b> Bananplantor inte träd men egentligen örter. ]]> </string>
+    <string name="desc_strawberry"><![CDATA[Mogna <b>jordgubbar</b> är <b><font color=\"#FF0000\">röda</font></b> i färg, saftiga och mycket söt.
+    Liksom äpplen, växer de över hela världen och precis som <b><font color=\"#FFA500\">apelsiner,</font></b> innehåller jordgubbar massor av vitamin C.
+    Många djur, fåglar och insekter älskar också att äta jordgubbar. ]]> </string>
+
+    <!-- SV Names of the fruit recipes : used in arrays.xml -->
+    <string name="recipe_apple">Äpplen för maskar</string>
+    <string name="recipe_orange">Apelsinjos</string>
+    <string name="recipe_banana">Banana split</string>
+    <string name="recipe_strawberry">Pannkakor \u0026  Jordgubbar</string>
+
+    <!-- SV Fruit recipes : used in arrays.xml -->
+    <string name="steps_apple"><![CDATA[
+        <b>( 1 )</b> Lämna <b>äpple</b> på marken.<br/>
+        <b>( 2 )</b> Maskarna och andra insekter kommer äta den. ]]> </string>
+    <string name="steps_orange"><![CDATA[
+        <b>( 1 )</b> Skär en eller flera <b>apelsiner</b> i hälften (eller fråga någon som är tillåtet att använda en kniv för att göra det).<br/>
+        <b>( 2 )</b> Pressa saften i ett glas.<br/>
+        <b>( 3 )</b> Drick och njut! ]]> </string>
+    <string name="steps_banana"><![CDATA[
+        <b>( 1 )</b> Skala en <b>banan.</b><br/>
+        <b>( 2 )</b> Placera de två halvorna i en lång skål.<br/>
+        <b>( 3 )</b> Lägg tre skopor av glass mellan dem.<br/>
+        <b>( 4 )</b> Tillsätt grädde, riven choklad och körsbär.<br/>
+        <b>( 5 )</b> Ät och njut! ]]> </string>
+    <string name="steps_strawberry"><![CDATA[
+        <b>( 1 )</b> Tvätta några <b>jordgubbar.</b><br/>
+        <b>( 2 )</b> Vispa lite grädde.<br/>
+        <b>( 3 )</b> Gör minst tre pannkakor (eller få en vuxen att göra det).<br/>
+        <b>( 4 )</b> Varva pannkakor, jordgubbar och grädde.<br/>
+        <b>( 5 )</b> Ät och njut! ]]> </string>
+
+</resources>

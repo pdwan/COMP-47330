@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student     : Paula Dwan
+    Student ID  : 13208660
+    Course      : COMP-47330 Practical Android Computing
+    Assignment  : 2
+    Due date    : 23-March-2015
+
+Summary : Fruit App for Children where
+    1a. User launches application - main activity opens - 'FruitAppMain'
+    1b. User sees list of fruit (ListView).
+    2a. User clicks on one fruit in ListView and opens second activity -
+        'DisplayFruitInformation'.
+    2b. 'DisplayFruitInformation' fields are populated using arrays from arrays.xml.
+        Two languages exist - English (EN) and Swedish (SV)
+    3.  In 'DisplayFruitInformation' activity, [Back] button returns user to
+        'FruitAppMain'.
+
+File :  AndroidManifest.xml for app
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.dwan.paula.a2_fruitapp_textonly"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:maxSdkVersion="19" />
+
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".FruitAppMain"
+            android:configChanges="keyboardHidden|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FruitAppSpecificInfo"
+            android:configChanges="keyboardHidden|screenSize"
+            android:label="@string/app_more_info"
+            android:parentActivityName=".FruitAppMain">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.dwan.paula.a2_fruitapp_textonly.FruitAppMain" />
+        </activity>
+    </application>
+
+</manifest>

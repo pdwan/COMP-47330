@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student     : Paula Dwan
+    Student ID  : 13208660
+    Course      : COMP-47330 Practical Android Computing
+    Assignment  : 2
+    Due date    : 23-March-2015
+
+    Summary     : Fruit App for Children where
+                    1a. User launches application - main activity opens - 'FruitAppMain'
+                    1b. User sees list of fruit (ListView).
+                    2a. User clicks on one fruit in ListView and opens second activity -
+                        'DisplayFruitInformation'.
+                    2b. 'DisplayFruitInformation' fields are populated using arrays from arrays.xml.
+                        Two languages exist - English (EN) and Swedish (SV)
+                    3.  In 'DisplayFruitInformation' activity, [Back] button returns user to
+                        'FruitAppMain'.
+    File        :   activitity_ifruit_app_main.xml : normal portrait device
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".FruitAppMain">
+
+    <ListView
+        android:id="@+id/fruitList"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:padding="10dp" >
+    </ListView>
+
+</RelativeLayout>
