@@ -54,9 +54,9 @@ public class LoginHomeActivity extends ActionBarActivity {
         try {
             databaseAdapter = databaseAdapter.open();
             DatabaseTablesInitialization databaseTablesInitialization = new DatabaseTablesInitialization();
-            databaseTablesInitialization.populateCustomerTable();
-            databaseTablesInitialization.populateStoreTable();
-            databaseTablesInitialization.populateStoreForCustomerTable();
+            //databaseTablesInitialization.populateCustomerTable();
+            //databaseTablesInitialization.populateStoreTable();
+            // databaseTablesInitialization.populateStoreForCustomerTable();
         } catch (SQLException e) {
             Log.d(CLASS_NAME, "\t: onCreate - login as new or existing user - SQL exception ...");
             e.printStackTrace();

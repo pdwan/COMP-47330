@@ -14,7 +14,10 @@ enum StoreError implements CharSequence {
 
     ERROR9001("ERR-9001 : For more help on this app, please see : http://www.lunar-stores.ie"),
     ERROR9002("ERR-9002 : De-register is not available at this stage."),
-    ERROR9003("ERR-9003 : Insufficient points collected for this store.");
+    ERROR9003("ERR-9003 : Insufficient points collected for this store."),
+    ERROR9004("ERR-9004 : Points not collected for this store, click <Add Store> in next activity to add."),
+    ERROR9005("ERR-9004 : Points already collected for this store."),
+    ;
 
     private final String message;
 

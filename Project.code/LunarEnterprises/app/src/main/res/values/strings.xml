@@ -53,6 +53,7 @@
     <string name="btnSubmit">Submit</string>
     <string name="btnClearAll">Clear All</string>
     <string name="btnBack">Back</string>
+    <string name="btnCollectPoints">Add Store</string>
 
     <!-- TEXT VIEWS - for equivalent <EditText> fields
     home, repeat login, register login, register customer details, register T&Cs-->
@@ -103,8 +104,6 @@
     <string name="cb3rdParty">Allow contact from trusted partners?</string>
     <string name="chkTermConditionsRead">I confirm that I have read and understood the T\u0026C\'s.</string>
 
-    <string name="icon">icon</string>
-
     <!-- ACTION ITEMS - drop-down listing in customised menu, -->
     <string name="item_close">Close</string>
     <string name="item_deregister">De-register</string>
@@ -113,7 +112,9 @@
     <!-- IMAGE VIEW - store logo and ZXing bar-code o QR-code-->
     <string name="ivZXingDesc">QR-code or Bar-code generated using ZXing</string>
 
+    <!-- LIST VIEW - store and image -->
+    <string name="icon">icon</string>
+
     <string name="hello_world">Hello big bad world!</string>
-    <string name="item_list" />
 
 </resources>

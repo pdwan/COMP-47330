@@ -27,7 +27,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.dwan.paula.lunarenterprises.GlobalVariableCustomerId;
 import org.dwan.paula.lunarenterprises.R;
+import org.dwan.paula.lunarenterprises.database.DatabaseAdapter;
 import org.dwan.paula.lunarenterprises.monochrome.GenerateZXingCodeActivity;
 
 public class DisplayStoreSpecificInfoActivity extends ActionBarActivity {
@@ -37,6 +39,7 @@ public class DisplayStoreSpecificInfoActivity extends ActionBarActivity {
     public static final String STORE_IMAGE = "storeImage";
     public static final String STORE_VOUCHER = "storeVoucher";
 
+    DatabaseAdapter databaseAdapter;
     ListView listViewVouchers;
     String voucherDescription = "";
     String image = "";
@@ -96,8 +99,23 @@ public class DisplayStoreSpecificInfoActivity extends ActionBarActivity {
                 voucherDescription = tvVoucher.getText().toString();
             }
         });
+    }
 
+    /**
+     * begin collecting points for this store - store is not currently in store4customer.tb
+     * needs to be added.
+     */
+    public void startCollectingPoints(){
 
+        int storeId = databaseAdapter.getStoreIdUsingStoreName(store);
+
+        final GlobalVariableCustomerId globalVariableCustomerId = (GlobalVariableCustomerId) getApplicationContext();
+        int points = databaseAdapter.getStorePointsBalanceUsingStoreId(storeId,globalVariableCustomerId.getCustId());
+
+        if (points == -1)
+            databaseAdapter.createStoreForCustomerPoints(storeId,globalVariableCustomerId.getCustId(), 0);
+        else if (points >= 0)
+            Toast.makeText(getApplicationContext(), StoreError.ERROR9005, Toast.LENGTH_SHORT).show();
     }
 
     /**

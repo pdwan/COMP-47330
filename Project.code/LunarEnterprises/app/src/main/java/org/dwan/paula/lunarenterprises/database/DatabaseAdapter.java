@@ -113,7 +113,7 @@ public class DatabaseAdapter extends ActionBarActivity {
     public void close() {
         Log.d(CLASS_NAME, ":\t close database ...");
 
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
         if (db != null && db.isOpen()) db.close();
     }
 
@@ -137,7 +137,7 @@ public class DatabaseAdapter extends ActionBarActivity {
     public long createStore(Store store) {
         Log.d(CLASS_NAME, ":\t createTableCustomer using SQLite ...");
 
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, store.getName());
         values.put(KEY_LOGO, store.getLogo());
@@ -159,7 +159,7 @@ public class DatabaseAdapter extends ActionBarActivity {
      * @return store matching store_id
      */
     public Store getStore(long store_id) {
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
         String sqlQuery = "SELECT * FROM " + TABLE_STORE + " WHERE " + KEY_ID + " = " + store_id;
 
         Log.d(CLASS_NAME, ":\t get Store using query = " + sqlQuery);
@@ -193,7 +193,7 @@ public class DatabaseAdapter extends ActionBarActivity {
 
         Log.d(CLASS_NAME, ":\t get All Stores using query = " + sqlQuery);
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sqlQuery, null);
 
         if (cursor.moveToFirst()) {
@@ -226,7 +226,7 @@ public class DatabaseAdapter extends ActionBarActivity {
 
         Log.d(CLASS_NAME, ":\t get Stores using query = " + sqlQuery);
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sqlQuery, null);
 
         if (cursor.moveToFirst()) {
@@ -258,7 +258,7 @@ public class DatabaseAdapter extends ActionBarActivity {
 
         Log.d(CLASS_NAME, ":\t get All Stores using query = " + sqlQuery);
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sqlQuery, null);
 
         if (cursor.moveToFirst()) {
@@ -294,7 +294,7 @@ public class DatabaseAdapter extends ActionBarActivity {
         String sqlQuery = "SELECT * FROM " + TABLE_STORE + " WHERE " + KEY_LOGIN + " = " + name;
         Log.d(CLASS_NAME, ":\t get store for specific store name : " + name + " using query = " + sqlQuery);
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sqlQuery, null);
         if (cursor != null) {
             cursor.moveToFirst();
@@ -316,7 +316,7 @@ public class DatabaseAdapter extends ActionBarActivity {
         String sqlQuery = "SELECT * FROM " + TABLE_STORE;
         Log.d(CLASS_NAME, ":\t count All Stores using query = " + sqlQuery);
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sqlQuery, null);
         int count = cursor.getCount();
         cursor.close();
@@ -334,7 +334,7 @@ public class DatabaseAdapter extends ActionBarActivity {
     public int updateStore(Store store) {
 
         Log.d(CLASS_NAME, ":\t update store details ...");
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(KEY_NAME, store.getName());
@@ -355,7 +355,7 @@ public class DatabaseAdapter extends ActionBarActivity {
     public void deleteStore(long store_id) {
         Log.d(CLASS_NAME, ":\t delete store for specified store id ...");
 
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
         db.delete(TABLE_STORE, KEY_ID + " = ?", new String[]{String.valueOf(store_id)});
     }
 
@@ -374,7 +374,7 @@ public class DatabaseAdapter extends ActionBarActivity {
     public long createCustomer(Customer customer) {
         Log.d(CLASS_NAME, ":\t createTableCustomer using SQLite ...");
 
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(KEY_NAME_1, customer.getName1());
@@ -406,7 +406,7 @@ public class DatabaseAdapter extends ActionBarActivity {
      */
     public Customer getCustomerUsingUserName(String userName) {
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
 
         String sqlQuery = "SELECT * FROM " + TABLE_CUSTOMER + " WHERE " + KEY_LOGIN + " = " + userName;
         Log.d(CLASS_NAME, ":\t get single Customer using query = " + sqlQuery);
@@ -445,7 +445,7 @@ public class DatabaseAdapter extends ActionBarActivity {
      */
     public Customer getCustomer(long customer_id) {
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
 
         String sqlQuery = "SELECT * FROM " + TABLE_CUSTOMER + " WHERE " + KEY_ID + " = " + customer_id;
         Log.d(CLASS_NAME, ":\t get single Customer using query = " + sqlQuery);
@@ -488,7 +488,7 @@ public class DatabaseAdapter extends ActionBarActivity {
         String sqlQuery = "SELECT * FROM " + TABLE_CUSTOMER;
         Log.d(CLASS_NAME, ":\t get single Customer using query = " + sqlQuery);
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sqlQuery, null);
         if (cursor.moveToFirst()) {
             do {
@@ -528,7 +528,7 @@ public class DatabaseAdapter extends ActionBarActivity {
         String sqlQuery = "SELECT * FROM " + TABLE_CUSTOMER + " WHERE " + KEY_LOGIN + " = " + userName;
         Log.d(CLASS_NAME, ":\t get password for specific user : " + userName + " using query = " + sqlQuery);
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sqlQuery, null);
         if (cursor != null) {
             cursor.moveToFirst();
@@ -553,7 +553,7 @@ public class DatabaseAdapter extends ActionBarActivity {
         String sqlQuery = "SELECT * FROM " + TABLE_CUSTOMER + " WHERE " + KEY_LOGIN + " = " + userName;
         Log.d(CLASS_NAME, ":\t does user : " + userName + "exist in table using query = " + sqlQuery);
 
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sqlQuery, null);
         if (cursor != null) {
             cursor.moveToFirst();
@@ -573,7 +573,7 @@ public class DatabaseAdapter extends ActionBarActivity {
      */
     public int updateCustomer(Customer customer) {
         Log.d(CLASS_NAME, ":\t update specified customer in customer.tb ...");
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(KEY_NAME_1, customer.getName1());
@@ -601,14 +601,13 @@ public class DatabaseAdapter extends ActionBarActivity {
      */
     public void deleteCustomer(Customer customer) {
         Log.d(CLASS_NAME, ":\t delete specified customer in customer.tb ...");
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
 
         // delete Stores associated with Customer
         List<Store> allCustomerStores = getAllStoresByCustomer(customer.getNameLogin());
         for (Store store : allCustomerStores) {
             deleteStore(store.getId());
         }
-
         // delete customer
         db.delete(TABLE_CUSTOMER, KEY_ID + "= ?", new String[]{String.valueOf(customer.getId())});
     }
@@ -628,7 +627,7 @@ public class DatabaseAdapter extends ActionBarActivity {
      */
     public long createStoreForCustomerPoints(long store_id, long customer_id, long points) {
         Log.d(CLASS_NAME, "\t: create shop4customer.tb - with specific value for points ...");
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(KEY_CUSTOMER_ID, customer_id);
@@ -652,7 +651,7 @@ public class DatabaseAdapter extends ActionBarActivity {
      */
     public long createStoreForCustomer(long store_id, long customer_id) {
         Log.d(CLASS_NAME, "\t: create joined shop4customer.tb  ...");
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(KEY_CUSTOMER_ID, customer_id);
@@ -669,9 +668,22 @@ public class DatabaseAdapter extends ActionBarActivity {
      * TABLE_STORE_FOR_CUSTOMER - <b>CRUD</b> methods --> <i>read </i>
      * retrieve store id for specific store name
      */
-    public int getStorePointsBalanceUsingStoreId(int id) {
+    public int getStorePointsBalanceUsingStoreId(int storeId, int custId) {
+        Log.d(CLASS_NAME, "\t: update row using storeId = " + storeId);
 
-        return 5;
+        int points = -1;
+        String sqlQuery = "SELECT * FROM " + TABLE_STORE_FOR_CUSTOMER + " WHERE " + KEY_STORE_ID + storeId;
+        Log.d(CLASS_NAME, ":\t get points for store : " + storeId + " and customer : " + custId);
+
+        db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sqlQuery, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+            points = (cursor.getInt(cursor.getColumnIndex(KEY_POINTS_BALANCE)));
+        }
+        cursor.close();
+
+        return points;
     }
 
     /**
@@ -679,16 +691,16 @@ public class DatabaseAdapter extends ActionBarActivity {
      * update specified customer id (FK) for specified key id (PK)
      *
      * @param id      : PK of shop4customer.tb
-     * @param shop_id : shop id (FK) to update
+     * @param storeId : shop id (FK) to update
      * @return updated row
      */
-    public int updateStoreForCustomerForStoreId(long id, long shop_id) {
-        Log.d(CLASS_NAME, "\t: update row using shop_id = " + shop_id);
+    public int updateStoreForCustomerForStoreId(long id, long storeId) {
+        Log.d(CLASS_NAME, "\t: update row using storeId = " + storeId);
 
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
-        contentValues.put(KEY_STORE_ID, shop_id);
+        contentValues.put(KEY_STORE_ID, storeId);
 
         return db.update(TABLE_STORE_FOR_CUSTOMER, contentValues, KEY_ID + " = ?", new String[]{String.valueOf(id)});
     }
@@ -704,7 +716,7 @@ public class DatabaseAdapter extends ActionBarActivity {
     public int updateStoreForCustomerForCustomerId(long id, long customer_id) {
         Log.d(CLASS_NAME, "\t: update row using customer_id = " + customer_id);
 
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(KEY_CUSTOMER_ID, customer_id);
@@ -718,7 +730,7 @@ public class DatabaseAdapter extends ActionBarActivity {
     public void getPointsFromStoreForCustomerForStoreId(long id) {
         Log.d(CLASS_NAME, "\t: get store id from table shop4customer.tb  ...");
 
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
         db.delete(TABLE_STORE_FOR_CUSTOMER, KEY_ID + " = ?", new String[]{String.valueOf(id)});
     }
 }

@@ -24,6 +24,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import org.dwan.paula.lunarenterprises.GlobalVariableCustomerId;
 import org.dwan.paula.lunarenterprises.R;
 import org.dwan.paula.lunarenterprises.database.DatabaseAdapter;
 import org.dwan.paula.lunarenterprises.database.Store;
@@ -89,14 +90,20 @@ public class DisplayStoreListingActivity extends ActionBarActivity implements On
         Log.d(CLASS_NAME, "\t: onItemClick for selected row ...");
 
         int imageId = storeImages[position];
-        String store = storeNames[position];
+        String name = storeNames[position];
 
-        int storeId = databaseAdapter.getStoreIdUsingStoreName(store);
-        int points = databaseAdapter.getStorePointsBalanceUsingStoreId(storeId);
+        int storeId = databaseAdapter.getStoreIdUsingStoreName(name);
 
+        final GlobalVariableCustomerId globalVariableCustomerId = (GlobalVariableCustomerId) getApplicationContext();
+        int points = databaseAdapter.getStorePointsBalanceUsingStoreId(storeId,globalVariableCustomerId.getCustId());
+
+        if (points == 0)
+            Toast.makeText(getApplicationContext(), StoreError.ERROR9003, Toast.LENGTH_SHORT).show();
+        else if (points == -1)
+            Toast.makeText(getApplicationContext(), StoreError.ERROR9004, Toast.LENGTH_SHORT).show();
         Intent intentStoreListing = new Intent(this, DisplayStoreSpecificInfoActivity.class);
         intentStoreListing.putExtra(STORE_IMAGE, imageId);
-        intentStoreListing.putExtra(STORE_NAME, store);
+        intentStoreListing.putExtra(STORE_NAME, name);
         intentStoreListing.putExtra(STORE_POINTS, points);
         startActivity(intentStoreListing);
     }

@@ -90,7 +90,6 @@ public class RegisterTermsAndConditionsActivity extends ActionBarActivity {
         finish();
     }
 
-
     /**
      * Creates action bar for inclusion of overflow menu.
      *
