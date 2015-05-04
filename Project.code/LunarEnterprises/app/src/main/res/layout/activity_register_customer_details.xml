@@ -1,0 +1,284 @@
+<?xml version ="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    activity_register_customer_details.xml
+            This is the layout for an new user to register his/her contact details and personal
+            preferences for future contact - email, sms and 3rd party.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:horizontalSpacing="@dimen/activity_horizontal_margin"
+    android:verticalSpacing="@dimen/activity_vertical_margin">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:shrinkColumns="1">
+        <!-- USER register - contact details -->
+        <TableRow
+            android:id="@+id/rowCustomerName1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewCustomerName"
+                android:background="@drawable/cell_round_navy"
+                android:gravity="center_horizontal"
+                android:text="@string/tvName"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/edittextCustomerNameFirst"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="@string/hintCustomerNameFirst"
+                android:inputType="text"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic">
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowCustomerNameFamily"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView android:id="@+id/null2"></TextView>
+
+            <EditText
+                android:id="@+id/edittextCustomerNameFamily"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="@string/hintCustomerNameFamily"
+                android:inputType="text"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowCustomerAddress1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewCustomerAddress1"
+                android:background="@drawable/cell_round_navy"
+                android:gravity="center_horizontal"
+                android:text="@string/tvAddress"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/edittextCustomerAddress1"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="@string/hintAddress1"
+                android:inputType="text"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowCustomerAddress2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView android:id="@+id/null4"></TextView>
+
+            <EditText
+                android:id="@+id/edittextCustomerAddress2"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="@string/hintAddress2"
+                android:inputType="text"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowCustomerAddress3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView android:id="@+id/null5"></TextView>
+
+            <EditText
+                android:id="@+id/edittextCustomerAddress3"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="@string/hintAddress3"
+                android:inputType="text"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowCustomerAddress4"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView android:id="@+id/null6"></TextView>
+
+            <EditText
+                android:id="@+id/edittextCustomerAddress4"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="@string/hintAddress4"
+                android:inputType="text"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowCustomerMobile"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewCustomerMobile"
+                android:background="@drawable/cell_round_navy"
+                android:gravity="center_horizontal"
+                android:text="@string/tvMobile"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/edittextCustomerMobile"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="@string/hintMobile"
+                android:inputType="phone|text"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowCustomerMobileOK"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView android:id="@+id/null7"></TextView>
+
+            <CheckBox
+                android:id="@+id/chkCustomerMobile"
+                android:layout_weight="1"
+                android:ems="5"
+                android:text="@string/cbMobile"
+                android:textColor="@color/grey_dark"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowCustomerEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewCustomerEmail"
+                android:background="@drawable/cell_round_navy"
+                android:gravity="center_horizontal"
+                android:text="@string/tvEmail"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/edittextCustomerEmail"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="@string/hintEmail"
+                android:inputType="textWebEmailAddress|text"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowCustomerEmailOK"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView android:id="@+id/null8"></TextView>
+
+            <CheckBox
+                android:id="@+id/chkCustomerEmail"
+                android:layout_weight="1"
+                android:ems="5"
+                android:text="@string/cbEmail"
+                android:textColor="@color/grey_dark"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3rdPartyOK"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView android:id="@+id/null9"></TextView>
+
+            <CheckBox
+                android:id="@+id/chk3rdParty"
+                android:layout_weight="1"
+                android:ems="5"
+                android:text="@string/cb3rdParty"
+                android:textColor="@color/grey_dark"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:gravity="center">
+
+            <TextView android:id="@+id/null10"></TextView>
+
+            <Button
+                android:id="@+id/buttonRegisterSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_round_navy"
+                android:clickable="true"
+                android:ems="5"
+                android:onClick="SubmitCustomerContactDetails"
+                android:text="@string/btnSubmit"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/buttonRegisterClearAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_round_grey"
+                android:clickable="true"
+                android:ems="5"
+                android:onClick="ClearAllCustomerContactDetails"
+                android:padding="5dp"
+                android:text="@string/btnClearAll"
+                android:textColor="@color/blue_dark"
+                android:textStyle="italic" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

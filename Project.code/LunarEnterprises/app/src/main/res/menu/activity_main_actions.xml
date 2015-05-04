@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    activity_main_actions.xml
+            Activity bar - drop-down list items
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:org.dwan.paula.lunarenterprises="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/empty"
+        android:icon="@mipmap/app_logo"
+        android:title=""
+        org.dwan.paula.lunarenterprises:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/overflow_close"
+                android:icon="@mipmap/ic_close"
+                android:title="@string/item_close"
+                org.dwan.paula.lunarenterprises:showAsAction="never|withText" />
+            <item
+                android:id="@+id/overflow_deregister"
+                android:icon="@mipmap/ic_deregister"
+                android:title="@string/item_deregister"
+                org.dwan.paula.lunarenterprises:showAsAction="never|withText" />
+            <item
+                android:id="@+id/overflow_help"
+                android:icon="@mipmap/ic_help"
+                android:title="@string/item_help"
+                org.dwan.paula.lunarenterprises:showAsAction="never|withText" />
+        </menu>
+    </item>
+</menu> -->
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:org.dwan.paula.lunarenterprises="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/blankDetails"
+        android:title="."
+        org.dwan.paula.lunarenterprises:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_overflow"
+        android:icon="@mipmap/ic_list"
+        android:orderInCategory="11111"
+        android:title="@string/item_list"
+        org.dwan.paula.lunarenterprises:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/overflow_close"
+                android:icon="@mipmap/ic_close"
+                android:title="@string/item_close"
+                org.dwan.paula.lunarenterprises:showAsAction="never" />
+            <item
+                android:id="@+id/overflow_deregister"
+                android:icon="@mipmap/ic_deregister"
+                android:title="@string/item_deregister"
+                org.dwan.paula.lunarenterprises:showAsAction="never" />
+            <item
+                android:id="@+id/overflow_help"
+                android:icon="@mipmap/ic_help"
+                android:title="@string/item_help"
+                org.dwan.paula.lunarenterprises:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

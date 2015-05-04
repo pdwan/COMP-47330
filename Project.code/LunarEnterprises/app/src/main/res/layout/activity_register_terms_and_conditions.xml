@@ -1,0 +1,331 @@
+<?xml version ="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    activity_register_terms_and_conditions.xml
+            This is the layout for an new user to agree or not agree to T&C's.
+            Does not agree the the app closes, Agrees then he/she may register as a new user.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:horizontalSpacing="@dimen/activity_horizontal_margin"
+    android:verticalSpacing="@dimen/activity_vertical_margin">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:shrinkColumns="1">
+
+        <TableRow
+            android:id="@+id/rowTandC1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView android:id="@+id/nullStr01"></TextView>
+
+            <TextView
+                android:id="@+id/textviewTandCsString01"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:background="@color/grey_pale"
+                android:maxLines="5"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/tvTermConditionsIntro01"
+                android:textColor="@color/blue_dark"
+                android:textStyle="bold"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTandC2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView android:id="@+id/nullStr02"></TextView>
+
+            <TextView
+                android:id="@+id/textviewTandCSummary"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:background="@color/grey_pale"
+                android:maxLines="5"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/tvTermConditionsIntro02"
+                android:textColor="@color/blue_dark"
+                android:textStyle="bold"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTanC01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewTandCBullet01"
+                android:background="@drawable/cell_round_navy_bullet"
+                android:gravity="center_horizontal"
+                android:text="@string/tvTandCsBullet"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textviewTandC01"
+                android:layout_weight="1"
+                android:ems="5"
+                android:maxLines="10"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/tvTermConditions01"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTanC02"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewTandCBullet02"
+                android:background="@drawable/cell_round_navy_bullet"
+                android:gravity="center_horizontal"
+                android:text="@string/tvTandCsBullet"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textviewTandC02"
+                android:layout_weight="1"
+                android:ems="5"
+                android:maxLines="10"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/tvTermConditions02"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTanC03"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewTandCBullet03"
+                android:background="@drawable/cell_round_navy_bullet"
+                android:gravity="center_horizontal"
+                android:text="@string/tvTandCsBullet"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textviewTand03"
+                android:layout_weight="1"
+                android:ems="5"
+                android:maxLines="10"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/tvTermConditions03"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTanC04"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewTandCBullet04"
+                android:background="@drawable/cell_round_navy_bullet"
+                android:gravity="center_horizontal"
+                android:text="@string/tvTandCsBullet"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textviewTandC04"
+                android:layout_weight="1"
+                android:ems="5"
+                android:maxLines="10"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/tvTermConditions04"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTanC05"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewTandCBullet05"
+                android:background="@drawable/cell_round_navy_bullet"
+                android:gravity="center_horizontal"
+                android:text="@string/tvTandCsBullet"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textviewTandC05"
+                android:layout_weight="1"
+                android:ems="5"
+                android:maxLines="10"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/tvTermConditions05"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTanC06"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewTandCBullet06"
+                android:background="@drawable/cell_round_navy_bullet"
+                android:gravity="center_horizontal"
+                android:text="@string/tvTandCsBullet"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textviewTandC06"
+                android:layout_weight="1"
+                android:ems="5"
+                android:maxLines="10"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/tvTermConditions06"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTanC07"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewTandCBullet07"
+                android:background="@drawable/cell_round_navy_bullet"
+                android:gravity="center_horizontal"
+                android:text="@string/tvTandCsBullet"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textviewTandC07"
+                android:layout_weight="1"
+                android:ems="5"
+                android:maxLines="10"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/tvTermConditions07"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTanC08"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewTandCBullet08"
+                android:background="@drawable/cell_round_navy_bullet"
+                android:gravity="center_horizontal"
+                android:text="@string/tvTandCsBullet"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textviewTandC08"
+                android:layout_weight="1"
+                android:ems="5"
+                android:maxLines="10"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/tvTermConditions08"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTanCRead"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <CheckBox
+                android:id="@+id/checkBoxTandCRead"
+                android:layout_gravity="center_horizontal"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:ems="5"
+                android:maxLines="10"
+                android:singleLine="false"
+                android:text="@string/chkTermConditionsRead"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/blue_dark"
+                android:textStyle="bold|italic"></CheckBox>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:gravity="center">
+
+            <TextView android:id="@+id/null10"></TextView>
+
+            <Button
+                android:id="@+id/buttonAgreeYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_round_navy"
+                android:clickable="true"
+                android:ems="5"
+                android:onClick="AgreeToTermsAndConditions"
+                android:text="@string/btnAgreeYes"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/buttonAgreeNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_round_grey"
+                android:clickable="true"
+                android:ems="5"
+                android:onClick="DoNotAgreeToTermsAndConditions"
+                android:text="@string/btnAgreeNo"
+                android:textColor="@color/blue_dark"
+                android:textStyle="bold|italic" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

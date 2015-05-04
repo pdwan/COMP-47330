@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    list_item_voucher.xml
+            list of items - vouchers
+-->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textviewVoucher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="5dp"
+        android:textColor="@color/green"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"></TextView>
+
+</LinearLayout>

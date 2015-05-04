@@ -1,0 +1,111 @@
+<?xml version ="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    activity_sign_in.xmll
+            This is the layout for an existing user to sign-in to use the app.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:horizontalSpacing="@dimen/activity_horizontal_margin"
+    android:verticalSpacing="@dimen/activity_vertical_margin">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:shrinkColumns="1">
+
+        <TableRow
+            android:id="@+id/rowUser"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewUser"
+                android:background="@drawable/cell_round_purple"
+                android:gravity="center_horizontal"
+                android:text="@string/tvUserName"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/edittextUserLoginName"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="@string/hintUserNameToLogin"
+                android:inputType="text"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic">
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewPassword"
+                android:background="@drawable/cell_round_purple"
+                android:gravity="center_horizontal"
+                android:text="@string/tvUserPassword"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/edittextUserLoginPassword"
+                android:layout_weight="1"
+                android:ems="5"
+                android:hint="@string/hintExistingUserLoginPassword"
+                android:inputType="textPassword|text"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="italic"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:gravity="center">
+
+            <TextView android:id="@+id/null10"></TextView>
+
+            <Button
+                android:id="@+id/buttonSignInSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_round_purple"
+                android:clickable="true"
+                android:ems="5"
+                android:onClick="SubmitCustomerSQLDetails"
+                android:text="@string/btnSubmit"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/buttonSignInClearAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_round_grey"
+                android:clickable="true"
+                android:ems="5"
+                android:onClick="ClearAllLoginDetails"
+                android:padding="5dp"
+                android:text="@string/btnClearAll"
+                android:textColor="@color/purple"
+                android:textStyle="italic" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

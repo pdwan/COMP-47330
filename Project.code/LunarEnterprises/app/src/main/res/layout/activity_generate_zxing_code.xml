@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    activity_generate_zxing_code.xml
+            This is the layout for the ZXing Bar-code and QR-code.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:horizontalSpacing="@dimen/activity_horizontal_margin"
+    android:verticalSpacing="@dimen/activity_vertical_margin">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".LinearLayout">
+
+        <TextView
+            android:id="@+id/textviewStoreName"
+            android:layout_weight="1"
+            android:background="@drawable/cell_round_green"
+            android:layout_gravity="center_horizontal|center"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@color/grey_pale"
+            android:textStyle="bold|italic"
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent"></TextView>
+
+        <ImageView
+            android:id="@+id/imageviewBarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:contentDescription="@string/ivZXingDesc"
+            android:layout_gravity="center_horizontal|center"  />
+
+
+        <ImageView
+            android:id="@+id/imageviewQRcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:contentDescription="@string/ivZXingDesc"
+            android:layout_gravity="center_horizontal|center" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cell_round_grey"
+            android:clickable="true"
+            android:ems="5"
+            android:layout_gravity="center_horizontal|center"
+            android:onClick="backToStoreInformation"
+            android:padding="5dp"
+            android:text="@string/btnCancel"
+            android:textColor="@color/green"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+</ScrollView>

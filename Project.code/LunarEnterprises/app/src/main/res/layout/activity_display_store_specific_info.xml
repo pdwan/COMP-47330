@@ -1,0 +1,137 @@
+<?xml version ="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    activity_display_store_specific_info.xml
+            This is the layout for an current balance and available points on a store
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:horizontalSpacing="@dimen/activity_horizontal_margin"
+    android:verticalSpacing="@dimen/activity_vertical_margin">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:shrinkColumns="1">
+
+        <TableRow
+            android:id="@+id/rowStore"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imageivewImageName"
+                android:layout_weight="1"
+                android:maxHeight="80dp"
+                android:maxLines="40"></ImageView>
+
+            <TextView
+                android:id="@+id/textviewStoreName"
+                android:layout_weight="1"
+                android:background="@drawable/cell_round_green"
+                android:gravity="center_horizontal"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold|italic"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowSpacer1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"></TableRow>
+
+        <TableRow
+            android:id="@+id/rowCurrentBalance"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewCurrentBalance"
+                android:layout_weight="1"
+                android:background="@drawable/cell_round_green"
+                android:gravity="center_horizontal"
+                android:text="@string/tvCurrentBalance"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textviewPoints"
+                android:layout_weight="3"
+                android:background="@drawable/cell_round_grey"
+                android:gravity="center_horizontal"
+                android:text="50 points"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/green"
+                android:textStyle="italic"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowSpacer2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"></TableRow>
+
+        <TableRow
+            android:id="@+id/rowStoreListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textviewAvailableStores"
+                android:layout_weight="1"
+                android:background="@drawable/cell_round_green"
+                android:gravity="center_horizontal"
+                android:text="@string/tvAvailableStores"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/grey_pale"
+                android:textStyle="bold"></TextView>
+
+            <ListView
+                android:id="@+id/listViewVouchers"
+                android:layout_weight="3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/grey_dark"
+                android:dividerHeight="0.1dp" >
+
+            </ListView>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:gravity="center">
+
+            <TextView android:id="@+id/null10"></TextView>
+
+            <Button
+                android:id="@+id/buttonBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_round_grey"
+                android:clickable="true"
+                android:ems="5"
+                android:onClick="backToStoreListing"
+                android:padding="5dp"
+                android:text="@string/btnCancel"
+                android:textColor="@color/green"
+                android:textStyle="italic" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

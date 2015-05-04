@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    cell_round_navy_bullet.xml
+            This fakes a rounded shaped bullet with background color navy.-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/blue_dark" />
+    <corners android:radius="10px" />
+    <padding android:bottom="2dp" android:left="5dp" android:right="5dp" android:top="2dp" />
+</shape>

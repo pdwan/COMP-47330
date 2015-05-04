@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    list_item_image_store_image_store.xml
+            list of items - stoe logo's and names
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageviewIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/icon"></ImageView>
+
+    <TextView
+        android:id="@+id/textviewStore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="5dp"
+        android:textColor="@color/green"
+        android:textSize="30sp"
+        android:textStyle="bold"></TextView>
+
+</LinearLayout>

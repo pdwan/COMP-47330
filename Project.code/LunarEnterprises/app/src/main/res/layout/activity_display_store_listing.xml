@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    activity_display_Store_listing.xml
+            display list of items     -->
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DisplayStoreListing">
+
+    <TextView
+        android:id="@+id/textViewStoreListing"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/cell_round_green"
+        android:gravity="center_horizontal"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:text="@string/tvLunarStores"
+        android:textColor="@color/grey_pale"
+        android:textStyle="bold|italic"></TextView>
+
+    <ListView
+        android:id="@+id/storeList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:divider="@color/grey_dark"
+        android:dividerHeight="0.1dp" ></ListView>
+
+</RelativeLayout>

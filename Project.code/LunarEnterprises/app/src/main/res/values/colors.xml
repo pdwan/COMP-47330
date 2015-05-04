@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    colors.xml
+            This defines all colors by hex code used in the app. -->
+
+<resources>
+    <color name="black">#000000</color>
+    <color name="blue">#0000FF</color>
+    <color name="blue_dark">#000099</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="grey">#bdbdbd</color>
+    <color name="grey_pale">#f2f2f2</color>
+    <color name="grey_dark">#404040</color>
+    <color name="green">#008000</color>
+    <color name="green_bright">#00FF00</color>
+    <color name="green_dark">#004000</color>
+    <color name="orange">#FFA500</color>
+    <color name="purple">#800080</color>
+    <color name="red_dark">#660000</color>
+    <color name="teal">#008080</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+</resources>

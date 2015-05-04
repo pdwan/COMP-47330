@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Student Paula Dwan
+    ID      13208660
+    Module  COMP-47330 - Practical Android Programming
+    Course  MSc Advanced Software Engineering
+
+    File    strings.xml
+            These are all strings used in the app for the default language (EN). -->
+
+<resources>
+
+    <string name="app_name">Lunar Stores</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- ACTIVITY NAMES -->
+    <string name="title_activity_login_home"><b>STORES</b></string>
+    <string name="title_activity_sign_in">Sign-In : Existing User</string>
+    <string name="title_activity_register_login">Register : Sign-In Details</string>
+    <string name="title_activity_register_customer_details">
+        Register : New Customer Details</string>
+    <string name="title_activity_register_terms_and_conditions">
+        Register : Terms \u0026 Conditions</string>
+    <string name="title_activity_display_store_listing">Display Stores</string>
+    <string name="title_activity_display_store_specific_info">Display More Info</string>
+    <string name="title_activity_generate_zxing_code">Bar/QR Code</string>
+    <string name="title_activity_update_existing_customer">Update Existing Customer Activity</string>
+
+    <!-- HINTS - for equivalent <EditText> fields
+    repeat login, register login, register customer details,  -->
+    <string name="hintUserNameToLogin">Confirm/Create : login name</string>
+    <string name="hintExistingUserLoginPassword">Insert : existing password</string>
+    <string name="hintRegisterUserPasswordToLogin">Create : new password</string>
+    <string name="hintConfirmUserPasswordToLogin">Confirm : new password</string>
+    <string name="hintCustomerNameFamily">Enter : Surname / Family name</string>
+    <string name="hintCustomerNameFirst">Enter : First name / Use name</string>
+    <string name="hintAddress1">Address : first line + house number</string>
+    <string name="hintAddress2">Address : second line e.g.: area</string>
+    <string name="hintAddress3">Address : third line e.g.: town</string>
+    <string name="hintAddress4">Address : county</string>
+    <string name="hintMobile">Enter : Irish mobile number</string>
+    <string name="hintEmail">Enter : email address</string>
+
+    <!-- BUTTONS -
+    home, repeat login, register login, register customer details, register T&Cs -->
+    <string name="btnCancel">Cancel</string>
+    <string name="btnClose">Close</string>
+    <string name="btnRegister">Register</string>
+    <string name="btnAgreeYes">I Do \nAgree</string>
+    <string name="btnAgreeNo">I Don\'t \nAgree</string>
+    <string name="btnSignIn">Sign In</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="btnClearAll">Clear All</string>
+    <string name="btnBack">Back</string>
+
+    <!-- TEXT VIEWS - for equivalent <EditText> fields
+    home, repeat login, register login, register customer details, register T&Cs-->
+    <string name="tvUserName">User</string>
+    <string name="tvUserPassword">Password</string>
+    <string name="tvName">Name</string>
+    <string name="tvAddress">Address</string>
+    <string name="tvDOB">Date of birth</string>
+    <string name="tvMobile">Mobile</string>
+    <string name="tvEmail">Email</string>
+    <string name="tvTandCs">T\u0026Cs</string>
+    <string name="tvTandCsBullet">*</string>
+
+    <!-- TEXT VIEWS -
+    big info strings, welcome, home, -->
+    <string name="tvLunarStores">-- Lunar Stores --</string>
+    <string name="tvWelcomeTitle">Lunar Stores!</string>
+    <string name="tvWelcomeSignin">Click <b>Sign In</b>--> access your existing account.</string>
+    <string name="tvWelcomeRegister">Click <b>Register</b>--> to create a new account</string>
+    <string name="tvWelcomeSales">-- Lunar Stores -- \n<i>gateway to a galaxy of shopping!</i></string>
+    <string name="tvWelcomeUse"><i>Use Android to collate vouchers and coupons from all national \u0026 local stores.</i></string>
+
+    <!-- TEXT VIEWS - big info strings, T&C\'s -->
+    <string name="tvTermConditionsIntro01">Full details on our T\u0026C\'s are available on <u><i>www.lunar-stores.ie</i></u>, and subject to revision.</string>
+    <string name="tvTermConditionsIntro02">A summary follows :</string>
+    <string name="tvTermConditions01">I agree that my contact information will be retained in accordance with Data Protection Act and will be retained while I am a member of <i><b>Lunar Stores</b></i> program.</string>
+    <string name="tvTermConditions02">My email and mobile may also be used to contact me should I agree.</string>
+    <string name="tvTermConditions03">Should I agree then my details may be shared with one or more partner companies for appropriate marketing and sales offers.</string>
+    <string name="tvTermConditions04"><i><b>Lunar Stores</b></i> nor any of its partners are liable for any loss – financial or otherwise which may arise from using this facility.</string>
+    <string name="tvTermConditions05">All vouchers have a monetary value of 0.000001¢.</string>
+    <string name="tvTermConditions06">As a user of the <i><b>Lunar Stores</b></i> program, I agree that I am personally responsible for my login and associated password and further confirm that I will not share either with others.</string>
+    <string name="tvTermConditions07">I agree that my GPS location will be logged and used to facilitate personalized direct marketing (e.g.: voucher due to proximity to specific store).  This GPS information will not be stored on a personal basis.</string>
+    <string name="tvTermConditions08"><i><b>Lunar Stores</b></i> is the trading name of <i><b>Lunar Stores Ltd.</b></i> , registered in Ireland CRO-12345.</string>
+
+    <!-- COLOURS EXTRA INFO - top of activities -->
+    <string name="tvWelcomeMain">Welcome!</string>
+    <string name="tvWelcomeBack">Welcome Back!</string>
+    <string name="tvWelcomeNewCustomer">Contact Details</string>
+    <string name="tvTermConditionsTitle"><b>Agree</b> to the T\u0026C\'s.</string>
+
+    <!-- TEXT VIEW - vouchers & store listing-->
+    <string name="tvCurrentBalance">Current Balance</string>
+    <string name="tvAvailableStores">Available Stores</string>
+
+    <!-- CHECK BOXES - mobile & sms contact, -->
+    <string name="cbMobile">Allow contact via SMS?</string>
+    <string name="cbEmail">Allow contact via email?</string>
+    <string name="cb3rdParty">Allow contact from trusted partners?</string>
+    <string name="chkTermConditionsRead">I confirm that I have read and understood the T\u0026C\'s.</string>
+
+    <string name="icon">icon</string>
+
+    <!-- ACTION ITEMS - drop-down listing in customised menu, -->
+    <string name="item_close">Close</string>
+    <string name="item_deregister">De-register</string>
+    <string name="item_help">Help</string>
+
+    <!-- IMAGE VIEW - store logo and ZXing bar-code o QR-code-->
+    <string name="ivZXingDesc">QR-code or Bar-code generated using ZXing</string>
+
+    <string name="hello_world">Hello big bad world!</string>
+    <string name="item_list" />
+
+</resources>
