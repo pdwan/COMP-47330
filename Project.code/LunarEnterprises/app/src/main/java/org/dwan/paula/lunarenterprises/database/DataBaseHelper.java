@@ -84,7 +84,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     // TABLE --> create SHOP-FOR-CUSTOMER
     private static final String CREATE_TABLE_SHOP_FOR_CUSTOMER = sqlCreateTable
             + TABLE_SHOP_FOR_CUSTOMER + sqlLeft + KEY_ID + sqlPK + KEY_STORE_ID + sqlInteger
-            + KEY_CUSTOMER_ID + sqlInteger + KEY_POINTS_BALANCE + sqlInteger + sqlRight;
+            + KEY_CUSTOMER_ID + sqlInteger + KEY_POINTS_BALANCE + sqlInteger + KEY_CREATED_AT + sqlDatetime + sqlRight;
 
     /**
      * Database initialization

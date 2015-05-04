@@ -91,13 +91,11 @@ public class SignInActivity extends ActionBarActivity {
     public void submitCustomerSQLDetails(View view) {
         Log.d(CLASS_NAME, "\t: validate sign-in details as entered by existing customer & open next activity...");
 
-        // add custId to global variable
         Customer customer = new Customer();
         final GlobalVariableCustomerId globalVariableCustomerId = (GlobalVariableCustomerId) getApplicationContext();
         customer = databaseAdapter.getCustomerUsingUserName(etUser.getText().toString());
         globalVariableCustomerId.setCustId(customer.getId());
 
-        // send off intent
         Intent intentSignInDetails = new Intent(getApplicationContext(), DisplayStoreListingActivity.class);
         startActivity(intentSignInDetails);
     }

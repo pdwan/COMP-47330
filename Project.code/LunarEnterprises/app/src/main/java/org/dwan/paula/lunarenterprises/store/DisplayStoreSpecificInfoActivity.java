@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -31,14 +32,15 @@ import org.dwan.paula.lunarenterprises.monochrome.GenerateZXingCodeActivity;
 
 public class DisplayStoreSpecificInfoActivity extends ActionBarActivity {
 
+    private static final String CLASS_NAME = "DisplayStoreSpecific";
     public static final String STORE_NAME = "storeName";
     public static final String STORE_IMAGE = "storeImage";
     public static final String STORE_VOUCHER = "storeVoucher";
-    private static final String CLASS_NAME = "DisplayStoreSpecific";
-    ListView listView;
+
+    ListView listViewVouchers;
+    String voucherDescription = "";
     String image = "";
     String store = "";
-    int pointsBalance = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,7 @@ public class DisplayStoreSpecificInfoActivity extends ActionBarActivity {
         Log.d(CLASS_NAME, "\t: populateStoreIntent ...");
 
         int imageId = -1;
+        int pointsBalance = 0;
 
         if (intent != null) {
             store = intent.getStringExtra(DisplayStoreListingActivity.STORE_NAME);
@@ -83,8 +86,16 @@ public class DisplayStoreSpecificInfoActivity extends ActionBarActivity {
         }
         ArrayAdapter<String> voucherAdapter = new ArrayAdapter<String>(this,
                 R.layout.activity_display_store_specific_info, vouchersListing);
-        listView = (ListView) findViewById(R.id.listViewVouchers);
-        listView.setAdapter(voucherAdapter);
+        listViewVouchers = (ListView) findViewById(R.id.listViewVouchers);
+        listViewVouchers.setAdapter(voucherAdapter);
+
+        listViewVouchers.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TextView tvVoucher = (TextView) findViewById(R.id.textviewVoucher);
+                voucherDescription = tvVoucher.getText().toString();
+            }
+        });
 
 
     }
@@ -108,16 +119,6 @@ public class DisplayStoreSpecificInfoActivity extends ActionBarActivity {
     public void generateZXingCode(View view) {
         Log.d(CLASS_NAME, "\t: generate ZXing code ...");
 
-        String voucherDescription = "";
-        if (pointsBalance >= 1000) {
-            voucherDescription = "20% voucher";
-        } else if (pointsBalance >= 750) {
-            voucherDescription = "10% voucher";
-        } else if (pointsBalance >= 500) {
-            voucherDescription = "€10 voucher";
-        } else if (pointsBalance >= 250) {
-            voucherDescription = "€5 voucher";
-        }
         if (voucherDescription != "") {
             Intent generateZXingIntent = new Intent(this, GenerateZXingCodeActivity.class);
             generateZXingIntent.putExtra(STORE_IMAGE, image);
